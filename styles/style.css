@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/* CSS Reset */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template: var(--header-height) 1fr 1fr / 1fr;
+    grid-template-areas:
+        "header" 
+        "main"
+        "footer";
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+header {
+    grid-area: header;
+    height: var(--header-height);
+    background-color: var(--bg-color);
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+/* header settings */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+.navigation-container {
+    padding: 0 4.5rem 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    max-width: 100%;
+    max-height: var(--header-height);
+}
+
+.left-side, .right-side {
+    color: white;
+}
+
+
+/* footer settings */
+footer {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

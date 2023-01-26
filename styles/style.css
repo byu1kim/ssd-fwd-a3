@@ -1,0 +1,160 @@
+html {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
+
+/* carousel styles */
+
+.carousel {
+    background-color: var(--bg-color2);
+    color: black;
+}
+
+.carousel-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+} 
+
+.carousel p, h3 {
+    margin-bottom: 20px;
+}
+
+.coast-logo {
+    max-width: 200px;
+}
+
+.view-hub-button {
+    width: 284px;
+    border-radius: 14px;
+    background-color: var(--bg-color);
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.carousel-body {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-body article {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+    margin: 30px 30px 0px 30px;
+}
+
+.carousel-body article:not(:last-child) {
+    border-bottom: 1px solid black;
+}
+
+.carousel-body article img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.carousel-hdg {
+    letter-spacing: 1px; 
+    line-height: 10px;
+    padding-top: 10px;
+}
+
+.carousel-text {
+    font-size: 14px; 
+    font-weight: bold;
+}
+
+.carousel-author {
+    font-size: 13px;
+}
+
+/* footer styles */
+
+footer {
+    height: 600px;
+    background-color: var(--bg-color);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.footer-button-area {
+    background-color: white;
+    height: 200px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.load-more-button {
+    width: 400px;
+    border-radius: 14px;
+    background-color: var(--bg-color);
+    color: white;
+    font-weight: bold;
+    height: 63px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.footer-header {
+    border-bottom: 1.5px solid white;
+    padding-bottom: 10px;
+    padding: 30px;
+}
+
+.footer-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.footer-body a {
+    text-decoration: none;
+    flex-basis: 50%;
+    color: white;
+    line-height: 17px;
+    margin-bottom: 14px;
+    font-weight: bold;
+}
+
+.social-media {
+    display: flex;
+    column-gap: 20px;
+}
+
+.fa-brands {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer img {
+    width: 156px;
+    margin-bottom: 10px;
+}

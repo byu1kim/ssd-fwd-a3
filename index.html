@@ -14,7 +14,9 @@
     <title>Our News Today</title>
   </head>
   <body>
+    <!-- Responsive Menu -->
     <header>
+      <h1 class="sr-only">Header</h1>
       <div class="menu-btn" id="menu-btn">
         <div class="menu-bars">
           <div class="bar"></div>
@@ -28,57 +30,62 @@
       </h2>
 
       <nav class="menu" id="menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Channels</a></li>
-          <li><a href="#">Vancouver</a></li>
-          <li><a href="#">Account</a></li>
-          <li><a href="#">Search</a></li>
+        <div class="menu-btn" id="menu-btn">
+          <div class="bar close"></div>
+        </div>
+        <ul class="menu-left">
+          <li class="home">
+            <a href="#"
+              ><img
+                class="MainNavigationLinksMobile_menu-icon__ZQaJI"
+                src="https://assets.dailyhive.com/assets/2.3.14/static/icons/home-mobile.svg"
+                alt="home icon"
+              />Home</a
+            >
+          </li>
+          <li id="channel" value="cha" class="channel">
+            <a href="#" value="cha"
+              ><img
+                src="https://assets.dailyhive.com/assets/2.3.14/static/icons/channels-mobile.svg"
+                alt="channels icon"
+                value="cha"
+              />
+              <div value="cha">channels</div></a
+            >
+          </li>
+          <li id="vancouver" value="van" class="vancouver">
+            <a href="#" value="van"
+              ><img
+                src="https://assets.dailyhive.com/assets/2.3.14/static/icons/cities-mobile.svg"
+                alt="cities icon"
+                value="van"
+              />Vancouver</a
+            >
+          </li>
+          <li class="account">
+            <a href="#"
+              ><img
+                src="https://assets.dailyhive.com/assets/2.3.14/static/icons/account-mobile.svg"
+                alt="account icon"
+              />Account</a
+            >
+          </li>
+          <li class="search">
+            <a href="#"
+              ><img
+                src="https://assets.dailyhive.com/assets/2.3.14/static/icons/search-mobile.svg"
+                alt="search icon"
+              />Search</a
+            >
+          </li>
+          <li class="weather">Weather</li>
         </ul>
-        <ul class="channel">
-          <li>
-            <div>DH News</div>
-            <div></div>
-          </li>
-          <li>
-            <div>Dished</div>
-            <div></div>
-          </li>
-          <li>
-            <div>Listed</div>
-            <div></div>
-          </li>
-          <li>
-            <div>Urbanized</div>
-            <div></div>
-          </li>
-          <li>
-            <div>Venture</div>
-            <div></div>
-          </li>
-          <li>
-            <div></div>
-            <div></div>
-            Offside
-          </li>
-          <li>
-            <div></div>
-            <div></div>
-            Curated
-          </li>
-          <li>
-            <div></div>
-            <div></div>
-            Mapped
-          </li>
-          <li>
-            <div></div>
-            <div></div>
-            Canada
-          </li>
-        </ul>
+        <ul class="menu-right sub-cha" id="sub-channel"></ul>
+        <ul class="menu-right sub-van" id="sub-vancouver"></ul>
       </nav>
     </header>
+    <!-- End of Responsive Menu -->
+
     <main>
       <section>section one</section>
       <section>section two</section>

@@ -323,8 +323,44 @@ footer {
         /* background-color: red; */
     }
     .section-two {
-        background-color: lime;
-        /* grid-area: section-two / col4-start / last-line / 5; */
+        /* border: 3px solid lime; */
+    }
+    .banner-follow-us {
+        position: sticky;
+        background-color: var(--gray-color);
+        border: none;
+        border-radius: 14px;
+        top: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    .banner-follow-us-title {
+        text-transform: uppercase;
+        padding: 1.5rem;
+        padding-bottom: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
+    }
+    .banner-follow-us-icons {
+        display: flex;
+        gap: 1rem;
+        font-family: FontAwesome;
+        font-size: 28px;
+        padding: 1.5rem;
+        padding-top: 0.5rem;
+        color: #031831;
+    }
+    .banner-follow-us-icon-facebook::before {
+        content: "\f082";
+    }
+    .banner-follow-us-icon-instagram::before {
+        content: "\f16d";
+    }
+    .banner-follow-us-icon-twitter::before {
+        content: "\f099";
+    }
+    .banner-follow-us-icon-youtube::before {
+        content: "\f167";
     }
 }
 

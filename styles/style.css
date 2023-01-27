@@ -1,83 +1,319 @@
-@charset "utf-8";
-
-/* CSS Reset */
-/* apply a natural box layout model to all elements, but allowing components to change */
+/* RESET */
 html {
-	box-sizing: border-box;
-}
-*, *:before, *:after {
-	box-sizing: inherit;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
 
+/* Main Structure */
 body {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template: var(--header-height) 1fr 1fr / 1fr;
-    grid-template-areas:
-        "header" 
-        "main"
-        "footer";
-    width: 100%;
-    min-height: 100vh;
-    background-color: white;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template: var(--header-height) 1fr 1fr / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
 }
 
+/* MOBILE */
+/* Hamburger */
 header {
-    grid-area: header;
-    height: var(--header-height);
+  background-color: var(--bg-color, pink);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  grid-area: header;
+}
+
+.menu-btn {
+  padding: 30px 20px;
+  cursor: pointer;
+}
+
+.menu-bars {
+}
+
+.bar,
+.bar::before,
+.bar::after {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+}
+
+.bar::before,
+.bar::after {
+  content: " ";
+  position: absolute;
+  top: -9px;
+  left: 0;
+}
+
+.bar::after {
+  position: absolute;
+  top: 9px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  padding-top: 5px;
+  width: 130px;
+}
+
+.profile {
+  color: var(--bg-color);
+  background-color: white;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile a {
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+.profile i {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Menu display */
+.menu {
+  position: fixed;
+  border: 2px solid red;
+  width: 0;
+  top: 0px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  visibility: hidden;
+  transition: width 0.3s ease;
+}
+
+.show .menu {
+  transition: width 0.3s ease;
+  visibility: visible;
+  width: 100vw;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+/* Menu Left */
+.menu {
+  display: flex;
+}
+
+.menu-left {
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 150px;
+}
+
+.menu .menu-btn {
+  position: fixed;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+}
+
+.menu .bar {
+  background-color: transparent;
+}
+
+.menu .bar::before,
+.menu .bar::after {
+  top: 0px;
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+.menu .bar::after {
+  top: 0px;
+  transform: rotate(-45deg);
+}
+
+.menu-left {
+  padding-top: 60px;
+}
+
+.menu-left li {
+  padding: 10px;
+  cursor: pointer;
+}
+.menu-left li:hover,
+.menu-left li:focus,
+.menu-left li:active {
+  background-color: aqua;
+}
+
+.menu-left a div {
+}
+
+.menu-left a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+.menu-left img {
+  color: white;
+  width: 35px;
+  margin: 5px;
+}
+
+/* Menu Right */
+.menu-right {
+  background-color: var(--bg-color);
+  color: white;
+  overflow: scroll;
+  width: inherit;
+  position: relative;
+}
+
+.menu-right li {
+  border-bottom: 1px solid white;
+  margin: 15px;
+  padding-bottom: 15px;
+}
+
+.sub-cha,
+.sub-van {
+  /* position: fixed; */
+  /* left: 150px; */
+  width: calc(100vw - 150px);
+  height: 100%;
+  transition: width 0.5s ease, visibility ease;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.show .sub-cha,
+.show .sub-van {
+}
+
+.sub-van {
+  position: fixed;
+  left: 150px;
+  width: 0;
+}
+
+.menu-right li {
+  align-self: center;
+}
+
+.menu-right li:first-child {
+  margin-top: 30px;
+}
+
+.menu-right li:last-child {
+  margin-bottom: 30px;
+}
+
+.desktop {
+  display: none;
+}
+
+/* DESKTOP */
+/* media size depends on width of nav */
+@media (min-width: 660px) {
+  .mobile {
+  }
+
+  .menu .menu-btn {
+    left: 150px;
+  }
+
+  .menu-left {
+    padding-top: 0;
+  }
+
+  .menu-left a {
+    align-items: flex-start;
+  }
+  .menu-left img {
+    display: none;
+  }
+  .menu-right {
+    display: none;
+  }
+
+  .menu-left .account {
+    order: 1;
     background-color: var(--bg-color);
+  }
+
+  .menu-left .search {
+    order: 2;
+  }
+  .menu-left .home {
+    order: 3;
+  }
+  .menu-left .vancouver {
+    order: 4;
+  }
+  .menu-left .channel {
+    order: 5;
+  }
+  .menu-left .weather {
+    order: 6;
+  }
 }
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-area: footer;
-}
-
-
-/* header settings */
+/* Screen Reader Only */
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
-
-.navigation-container {
-    padding: 0 4.5rem 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Main */
+main {
+  grid-area: main;
 }
 
-header img {
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    max-width: 100%;
-    max-height: var(--header-height);
-}
-
-.left-side, .right-side {
-    color: white;
-}
-
-
-/* footer settings */
+/* Footer */
 footer {
-    background-color: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+  grid-area: footer;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }

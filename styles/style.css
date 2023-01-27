@@ -50,13 +50,13 @@ html {
 
 .carousel-body {
     padding-top: 20px;
+    margin-left: 15px;
     display: flex;
     flex-direction: column;
 }
 
 .carousel-body article {
     display: flex;
-    justify-content: space-between;
     column-gap: 15px;
     margin: 30px 30px 0px 30px;
 }
@@ -90,12 +90,14 @@ html {
 /* footer styles */
 
 footer {
-    height: 600px;
+    height: 590px;
     background-color: var(--bg-color);
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-button-area {
@@ -122,13 +124,14 @@ footer {
 
 .footer-header {
     border-bottom: 1.5px solid white;
-    padding-bottom: 10px;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .footer-body {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     padding: 30px;
     font-size: 14px;
@@ -143,6 +146,10 @@ footer {
     font-weight: bold;
 }
 
+.footer-list {
+    display: none;
+}
+
 .social-media {
     display: flex;
     column-gap: 20px;
@@ -150,11 +157,40 @@ footer {
 
 .fa-brands {
     color: white;
-    font-size: 2em;
+    font-size: 1.8em;
     margin-bottom: 10px;
 }
 
 footer img {
     width: 156px;
     margin-bottom: 10px;
+}
+
+.footer-copyright {
+    display: block;
+    width: 100%;
+    font-size: 0.6em;
+    line-height: 1.5em;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+/* Tablet breakpoint */
+
+@media (min-width: 768px) {
+    
+    .social-media {
+        display: none;
+    }
+
+    .footer-list {
+        display: none;
+    }
+
+}
+
+/* Desktop breakpoint */
+
+@media (min-width: 1320px) {
+
 }

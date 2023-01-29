@@ -155,25 +155,15 @@
       </section>
     </main>
     
+    <!-- Carousel panel - contains articles at mobile size, slideshow at larger sizes  -->
+
     <section class="carousel">
+      <!-- article view -->
       <div class="carousel-header">
         <h3>BROUGHT TO YOU BY</h3>
         <img class="coast-logo" src="images/Coast-Capital-Logo.png">
         <p>Don't let financial stress keep you up at night.</p>
         <button class="view-hub-button" type="button">VIEW HUB</button>
-      </div>
-      <div class="carousel-header2">
-        <div class="carousel-hdg">
-          <h3>BROUGHT TO YOU BY</h3>
-          <img class="coast-logo2" src="images/Coast-Capital-Logo.png">
-        </div>
-        <!-- Next and previous buttons -->
-        <div class="carousel-buttons">
-          <div class="circle1"></div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <div class="circle2"></div>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
       </div>
       <div class="carousel-body">
         <article>
@@ -206,6 +196,21 @@
             <p class="carousel-author">Daily Hive Staff</p>
           </div>
         </article>
+      </div>
+
+      <!-- slideshow view -->
+      <div class="carousel-header2">
+        <div class="carousel-hdg">
+          <h3>BROUGHT TO YOU BY</h3>
+          <img class="coast-logo2" src="images/Coast-Capital-Logo.png">
+        </div>
+        <!-- Next and previous buttons -->
+        <div class="carousel-buttons">
+          <div class="circle1"></div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <div class="circle2"></div>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
       </div>
       <div class="carousel-body2">
         <div class="slideshow-container">
@@ -247,10 +252,13 @@
 
     </section>
 
+    <!-- footer has 3 different layouts depending on screen size -->
     <footer>
       <div class="footer-button-area">
         <button class="load-more-button" type="button">LOAD MORE</button>
       </div>
+
+    <!-- mobile layout-->
       <div class="footer-header">
         <img src="images/dailyhive-logo-white.svg">
         <div class="social-media">
@@ -262,6 +270,23 @@
           <i class="fa-brands fa-tiktok"></i>
         </div>
       </div>
+      <div class="footer-body">
+        <a href="#">Advertise with us</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Policies & Guidelines</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Masthead</a>
+        <a href="#">Send us tips</a>
+        <a href="#">Contest Rules</a>
+        <a href="#">Careers</a>            
+      </div>
+      <div class="footer-copyright">
+        <p>Daily Hive is a Canadian-born online news source, established in 2008, that creates compelling, hyperlocal content.</p>
+        <p> Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
+      </div> 
+
+      <!-- change of layout at min-width 768 -->
       <div class="footer-header2">
         <img src="images/dailyhive-logo-white.svg">
         <div class="footer-menu2">
@@ -276,6 +301,43 @@
           <a href="#">Careers</a>
         </div>
       </div>
+      <div class="footer-list">
+        <p>DH NEWS</p>
+        <p>DISHED</p>
+        <p>LISTED</p>
+        <p>URBANISED</p>
+        <p>VENTURE</p>
+        <p>OFFSIDE</p>
+        <p>CURATED</p>
+        <p>MAPPED</p>
+        <p>CANADA</p>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright2">
+          <p>Daily Hive is a Canadian-born online news source, established in 2008, that creates compelling, hyperlocal content.</p>
+          <p> Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
+        </div> 
+        <div class="footer-contact">
+          <label for="footerEmailBox">Get direct access to our top weekly content, contests, and perks.</label>
+          <form>
+            <input name="EMAIL" placeholder="Enter Email Address" id="footerEmailBox" data-testid="footerEmailBox" value="">
+            <button type="submit" class="footer-submit" aria-label="Submit user email">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="social-media2">
+            <p>Follow us</p>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+        </div>  
+      </div>
+
+      <!-- change of layout at min-width 1320 -->
       <div class="footer-header3">
         <img src="images/dailyhive-logo-white.svg">
         <div class="footer-menu3">
@@ -290,29 +352,6 @@
           <a href="#">Careers</a>
         </div>
       </div>
-      <div class="footer-body">
-        <a href="#">Advertise with us</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-        <a href="#">Policies & Guidelines</a>
-        <a href="#">Accessibility</a>
-        <a href="#">Masthead</a>
-        <a href="#">Send us tips</a>
-        <a href="#">Contest Rules</a>
-        <a href="#">Careers</a>            
-      </div>
-      <div class="footer-list">
-        <p>DH NEWS</p>
-        <p>DISHED</p>
-        <p>LISTED</p>
-        <p>URBANISED</p>
-        <p>VENTURE</p>
-        <p>OFFSIDE</p>
-        <p>CURATED</p>
-        <p>MAPPED</p>
-        <p>CANADA</p>
-      </div>
-
       <div class="footer-links">
         <div class="footer-list-col">
           <p>DH NEWS</p>
@@ -400,36 +439,6 @@
           <p>Food</p>
         </div>
       </div>
-
-      <div class="footer-copyright">
-        <p>Daily Hive is a Canadian-born online news source, established in 2008, that creates compelling, hyperlocal content.</p>
-        <p> Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
-      </div> 
-      <div class="footer-bottom">
-        <div class="footer-copyright2">
-          <p>Daily Hive is a Canadian-born online news source, established in 2008, that creates compelling, hyperlocal content.</p>
-          <p> Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
-        </div> 
-        <div class="footer-contact">
-          <label for="footerEmailBox">Get direct access to our top weekly content, contests, and perks.</label>
-          <form>
-            <input name="EMAIL" placeholder="Enter Email Address" id="footerEmailBox" data-testid="footerEmailBox" value="">
-            <button type="submit" class="footer-submit" aria-label="Submit user email">
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </form>
-          <div class="social-media2">
-            <p>Follow us</p>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-tiktok"></i>
-          </div>
-        </div>  
-      </div>
-
       <div class="footer-bottom2">
         <div class="footer-copyright3">
           <p>Daily Hive is a Canadian-born online news source, established in 2008, that creates compelling, hyperlocal content.</p>

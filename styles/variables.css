@@ -1,5 +1,13 @@
 :root {
     --bg-color: #031831;
-    --bg-color2: #e3e3e3;
+    --gray-color: #e3e3e3;
+    
+    /* variables for header */
+    --header-height-sm: 60px;
+    --header-height: 80px;
+
+    /* settings for MAIN */
+    --border-section-gray: 1px solid #979797;
+
     --font-family: "Verdana", sans-serif;
 }

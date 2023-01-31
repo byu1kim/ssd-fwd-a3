@@ -1,9 +1,9 @@
 const body = document.body;
 const menuBtn = document.getElementsByClassName("menu-btn");
 const nav = document.getElementById("menu");
+const menuLeft = document.getElementById("menu-left");
 const subCha = document.getElementById("sub-channel");
 const subVan = document.getElementById("sub-vancouver");
-
 const btnCha = document.getElementById("channel");
 const btnVan = document.getElementById("vancouver");
 
@@ -43,11 +43,12 @@ for (let i = 0; i < vancouver.length; i++) {
   subVan.appendChild(li);
 }
 
+// Handling Hamburger Menu Button
 const handleClick = (e) => {
   const show = body.classList.toggle("show");
   if (!show) {
-    subVan.style.visibility = "inherit";
-  } else {
+    subCha.style.display = "none";
+    subVan.style.display = "none";
   }
 };
 
@@ -55,32 +56,34 @@ for (let i = 0; i < menuBtn.length; i++) {
   menuBtn[i].addEventListener("click", handleClick);
 }
 
-// Handling menu
-
-btnCha.addEventListener("click", handleChannel);
-btnVan.addEventListener("click", handleVancouver);
-
-function handleChannel() {
-  subCha.style.width = "calc(100vw - 150px)";
-  subVan.style.width = "0";
-  subCha.style.visibility = "visible";
-  subVan.style.visibility = "hidden";
-}
-
-function handleVancouver() {
-  subCha.style.width = "0";
-  subVan.style.width = "calc(100vw - 150px)";
-  subCha.style.visibility = "hidden";
-  subVan.style.visibility = "visible";
-}
-
 // Hidden mobile menu changing window size
 const mql = window.matchMedia("(min-width: 660px)");
-
 function removeTransition(e) {
   if (e.matches) {
-    body.classList.remove("show");
+    // body.classList.remove("show");
+    subCha.style.display = "none";
+    subVan.style.display = "none";
   }
 }
 
 mql.addListener(removeTransition);
+
+// Handling Sub-menu in Mobile view & Desktop View
+btnCha.addEventListener("click", handleChannel);
+btnVan.addEventListener("click", handleVancouver);
+
+function handleChannel() {
+  if (!mql.matches) {
+    subCha.style.display = "grid";
+    subVan.style.display = "none";
+  } else {
+  }
+}
+
+function handleVancouver() {
+  if (!mql.matches) {
+    subCha.style.display = "none";
+    subVan.style.display = "grid";
+  } else {
+  }
+}

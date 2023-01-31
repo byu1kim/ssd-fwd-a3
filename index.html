@@ -25,6 +25,11 @@
         <img src="/images/dailyhive-color-white.svg" />
       </h1>
       <h2 class="profile">
+        <!-- <select name="cities" class="desktop-cities">
+          <option value="Vancouver">Vancouver</option>
+          <option value="Calgary">Calgary</option>
+          <option>Toronto</option>
+        </select> -->
         <a href="#"><i class="fa-solid fa-user"></i></a>
       </h2>
 
@@ -32,7 +37,7 @@
         <div class="menu-btn" id="menu-btn">
           <div class="bar close"></div>
         </div>
-        <ul class="menu-left">
+        <ul class="menu-left" class="menu-left">
           <li class="home">
             <a href="#"
               ><img
@@ -49,8 +54,19 @@
                 alt="channels icon"
                 value="cha"
               />
-              <div value="cha">channels</div></a
-            >
+              <div value="cha">Channels</div>
+            </a>
+          </li>
+          <li class="desktop-sub-menu">
+            <div>dh news</div>
+            <div>dished</div>
+            <div>listed</div>
+            <div>urbanized</div>
+            <div>venture</div>
+            <div>offside</div>
+            <div>curated</div>
+            <div>mapped</div>
+            <div>canada</div>
           </li>
           <li id="vancouver" value="van" class="vancouver">
             <a href="#" value="van"
@@ -76,8 +92,21 @@
                 alt="search icon"
               />Search</a
             >
+            <form>
+              <input type="text" placeholder="Search Daily" />
+            </form>
           </li>
-          <li class="weather">Weather</li>
+          <!-- <li class="weather">
+            <a href="#"><div class="weather-box">6C</div></a>
+          </li> -->
+          <li class="icons">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+          </li>
         </ul>
         <ul class="menu-right sub-cha" id="sub-channel"></ul>
         <ul class="menu-right sub-van" id="sub-vancouver"></ul>
@@ -98,36 +127,56 @@
           <!-- main storie -->
           <div class="main-news">
             <div class="section-main-container">
-              <img src="./images/jeop.jpg" class="section-image-main" alt="Jeopardy image">
+              <img
+                src="./images/jeop.jpg"
+                class="section-image-main"
+                alt="Jeopardy image"
+              />
               <div class="section-news">
                 <p>news</p>
-                <p>Way to go, Troy: "Jeopardy!" contestant nails question about this BC city</p>
-                <p>Amir Ali</p>                
+                <p>
+                  Way to go, Troy: "Jeopardy!" contestant nails question about
+                  this BC city
+                </p>
+                <p>Amir Ali</p>
               </div>
             </div>
           </div>
-          
+
           <!-- two more stories -->
-          <div class="more-news-container">  
+          <div class="more-news-container">
             <div class="section-main-container">
-              <img src="./images/CT.jpg" class="section-image" alt="ChinaTown image">
+              <img
+                src="./images/CT.jpg"
+                class="section-image"
+                alt="ChinaTown image"
+              />
               <div class="section-news">
                 <p>news</p>
-                <p>"The Chinatown I remember": Vancouver business owner wants to see neighbourhood thrive</p>
-                <p>Amir Ali</p>                
+                <p>
+                  "The Chinatown I remember": Vancouver business owner wants to
+                  see neighbourhood thrive
+                </p>
+                <p>Amir Ali</p>
               </div>
             </div>
 
             <div class="section-main-container">
-              <img src="./images/hmm.jpg" class="section-image" alt="Honeymoon image">
+              <img
+                src="./images/hmm.jpg"
+                class="section-image"
+                alt="Honeymoon image"
+              />
               <div class="section-news">
                 <p>canada</p>
-                <p>Rogue wave critically injures Canadian woman during Mexico honeymoon</p>
-                <p>Claire Fenton</p>                
+                <p>
+                  Rogue wave critically injures Canadian woman during Mexico
+                  honeymoon
+                </p>
+                <p>Claire Fenton</p>
               </div>
             </div>
           </div>
-
         </article>
 
         <article class="second-container">
@@ -137,14 +186,11 @@
         <article class="join-newsletter">
           <!-- Form for newsletter signin -->
         </article>
-
       </section>
 
-      <section class="section-two"> 
+      <section class="section-two">
         <div class="banner-follow-us">
-          <h3 class="banner-follow-us-title">
-            Follow Daily Hive
-          </h3>
+          <h3 class="banner-follow-us-title">Follow Daily Hive</h3>
           <div class="banner-follow-us-icons">
             <span class="banner-follow-us-icon-facebook"></span>
             <span class="banner-follow-us-icon-instagram"></span>
@@ -154,42 +200,51 @@
         </div>
       </section>
     </main>
-    
+
     <section class="carousel">
       <div class="carousel-header">
         <h3>BROUGHT TO YOU BY</h3>
-        <img class="coast-logo" src="images/Coast-Capital-Logo.png">
+        <img class="coast-logo" src="images/Coast-Capital-Logo.png" />
         <p>Don't let financial stress keep you up at night.</p>
         <button class="view-hub-button" type="button">VIEW HUB</button>
       </div>
       <div class="carousel-body">
         <article>
           <div>
-            <img src="images/final-Final-Coast-Capital-Images-0003-1-500x258.jpg">
+            <img
+              src="images/final-Final-Coast-Capital-Images-0003-1-500x258.jpg"
+            />
           </div>
           <div>
             <p class="carousel-hdg">VENTURE</p>
-            <p class="carousel-text">Do you have a good relationship...with your bank? (QUIZ)</p>
+            <p class="carousel-text">
+              Do you have a good relationship...with your bank? (QUIZ)
+            </p>
             <p class="carousel-author">Chris Middleton</p>
           </div>
         </article>
         <article>
           <div>
-            <img src="images/CoastCapital_Feature-500x258.jpg">
+            <img src="images/CoastCapital_Feature-500x258.jpg" />
           </div>
           <div>
             <p class="carousel-hdg">VENTURE</p>
-            <p class="carousel-text">Here are the 3 most common reasons we can’t stop stressing about money, according to an expert</p>
+            <p class="carousel-text">
+              Here are the 3 most common reasons we can’t stop stressing about
+              money, according to an expert
+            </p>
             <p class="carousel-author">Chris Middleton</p>
           </div>
         </article>
         <article>
           <div>
-            <img src="images/kelowna-500x258.jpg">
+            <img src="images/kelowna-500x258.jpg" />
           </div>
           <div>
             <p class="carousel-hdg">URBANIZED</p>
-            <p class="carousel-text">This is how much money you need to make to live alone in Kelowna</p>
+            <p class="carousel-text">
+              This is how much money you need to make to live alone in Kelowna
+            </p>
             <p class="carousel-author">Daily Hive Staff</p>
           </div>
         </article>
@@ -201,7 +256,7 @@
         <button class="load-more-button" type="button">LOAD MORE</button>
       </div>
       <div class="footer-header">
-        <img src="images/dailyhive-logo-white.svg">
+        <img src="images/dailyhive-logo-white.svg" />
         <div class="social-media">
           <i class="fa-brands fa-square-facebook"></i>
           <i class="fa-brands fa-instagram"></i>
@@ -220,7 +275,7 @@
         <a href="#">Masthead</a>
         <a href="#">Send us tips</a>
         <a href="#">Contest Rules</a>
-        <a href="#">Careers</a>            
+        <a href="#">Careers</a>
       </div>
       <div class="footer-list">
         <p>Dished</p>
@@ -232,9 +287,12 @@
         <p>Canada</p>
       </div>
       <div class="footer-copyright">
-        <p>Daily Hive is a Canadian-born online news source, established in 2008, that creates compelling, hyperlocal content.</p>
-        <p> Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
-      </div> 
+        <p>
+          Daily Hive is a Canadian-born online news source, established in 2008,
+          that creates compelling, hyperlocal content.
+        </p>
+        <p>Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
+      </div>
     </footer>
     <script src="./scripts/script.js"></script>
   </body>

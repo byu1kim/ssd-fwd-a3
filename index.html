@@ -224,8 +224,12 @@
 
       </section>
     </main>
+    
+    <!-- Carousel panel - contains articles at mobile size, slideshow at larger sizes  -->
+
 
     <section class="carousel">
+      <!-- article view -->
       <div class="carousel-header">
         <h3>BROUGHT TO YOU BY</h3>
         <img class="coast-logo" src="images/Coast-Capital-Logo.png" />
@@ -273,12 +277,68 @@
           </div>
         </article>
       </div>
+
+      <!-- slideshow view -->
+      <div class="carousel-header2">
+        <div class="carousel-hdg">
+          <h3>BROUGHT TO YOU BY</h3>
+          <img class="coast-logo2" src="images/Coast-Capital-Logo.png">
+        </div>
+        <!-- Next and previous buttons -->
+        <div class="carousel-buttons">
+          <div class="circle1"></div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <div class="circle2"></div>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </div>
+      <div class="carousel-body2">
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+              <img src="images/final-Final-Coast-Capital-Images-0003-1-500x258.jpg">
+              <div class="caption-text">
+                <p class="carousel-hdg2">VENTURE</p>
+                <p class="carousel-text">Do you have a good relationship...with your bank? (QUIZ)</p>
+                <p class="carousel-author">Chris Middleton</p>
+              </div>
+          </div>
+
+          <div class="mySlides fade">
+              <img src="images/CoastCapital_Feature-500x258.jpg">
+              <div class="caption-text">
+                <p class="carousel-hdg2">VENTURE</p>
+                <p class="carousel-text">Here are the 3 most common reasons we can’t stop stressing about money, according to an expert</p>
+                <p class="carousel-author">Chris Middleton</p>  
+              </div>
+          </div>
+
+          <div class="mySlides fade">
+              <img src="images/kelowna-500x258.jpg">
+              <div class="caption-text">
+                <p class="carousel-hdg2">URBANIZED</p>
+                <p class="carousel-text">This is how much money you need to make to live alone in Kelowna</p>
+                <p class="carousel-author">Daily Hive Staff</p>  
+              </div>
+          </div>
+
+        </div>
+        <br>
+      </div>
+      <div class="carousel-footer">
+        <p>Don't let financial stress keep you up at night.</p>
+        <button class="view-hub-button2" type="button">VIEW HUB</button>
+      </div>
+
     </section>
 
+    <!-- footer has 3 different layouts depending on screen size -->
     <footer>
       <div class="footer-button-area">
         <button class="load-more-button" type="button">LOAD MORE</button>
       </div>
+
+    <!-- mobile layout-->
       <div class="footer-header">
         <img src="images/dailyhive-logo-white.svg" />
         <div class="social-media">
@@ -301,15 +361,6 @@
         <a href="#">Contest Rules</a>
         <a href="#">Careers</a>
       </div>
-      <div class="footer-list">
-        <p>Dished</p>
-        <p>Listed</p>
-        <p>Urbanized</p>
-        <p>Offside</p>
-        <p>Curated</p>
-        <p>Mapped</p>
-        <p>Canada</p>
-      </div>
       <div class="footer-copyright">
         <p>
           Daily Hive is a Canadian-born online news source, established in 2008,
@@ -317,7 +368,187 @@
         </p>
         <p>Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
       </div>
+
+      <!-- change of layout at min-width 768 -->
+      <div class="footer-header2">
+        <img src="images/dailyhive-logo-white.svg">
+        <div class="footer-menu2">
+          <a href="#">Advertise with us</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Policies & Guidelines</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Masthead</a>
+          <a href="#">Send us tips</a>
+          <a href="#">Contest Rules</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div class="footer-list">
+        <p>DH NEWS</p>
+        <p>DISHED</p>
+        <p>LISTED</p>
+        <p>URBANISED</p>
+        <p>VENTURE</p>
+        <p>OFFSIDE</p>
+        <p>CURATED</p>
+        <p>MAPPED</p>
+        <p>CANADA</p>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copyright2">
+          <p>Daily Hive is a Canadian-born online news source, established in 2008, that creates compelling, hyperlocal content.</p>
+          <p> Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
+        </div> 
+        <div class="footer-contact">
+          <label for="footerEmailBox">Get direct access to our top weekly content, contests, and perks.</label>
+          <form>
+            <input name="EMAIL" placeholder="Enter Email Address" id="footerEmailBox" data-testid="footerEmailBox" value="">
+            <button type="submit" class="footer-submit" aria-label="Submit user email">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="social-media2">
+            <p>Follow us</p>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+        </div>  
+      </div>
+
+      <!-- change of layout at min-width 1320 -->
+      <div class="footer-header3">
+        <img src="images/dailyhive-logo-white.svg">
+        <div class="footer-menu3">
+          <a href="#">Advertise with us</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Policies & Guidelines</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Masthead</a>
+          <a href="#">Send us tips</a>
+          <a href="#">Contest Rules</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-list-col">
+          <p>DH NEWS</p>
+          <p>Weather</p>
+          <p>Travel Deals</p>
+          <p>Politics</p>
+          <p>Animals</p>
+          <p>Movies & TV</p>
+        </div>
+        <div class="footer-list-col">
+          <p>DISHED</p>
+          <p>News</p>
+          <p>Openings</p>
+          <p>Restaurants</p>
+          <p>Brunch</p>
+          <p>Events</p>
+          <p>Cheap Eats</p>
+          <p>Specials</p>
+          <p>Booze</p>
+          <p>Coffee & Tea</p>
+          <p>Desserts</p>
+          <p>Closings</p>
+          <p>Veggie</p>
+          <p>Food Trucks</p>
+          <p>Patios</p>
+        </div>
+        <div class="footer-list-col">
+          <p>LISTED</p>
+          <p>Events</p>
+          <p>Concerts</p>
+          <p>Summer</p>
+          <p>Photos</p>
+        </div>
+        <div class="footer-list-col">
+          <p>URBANISED</p>
+          <p>Real Estate</p>
+          <p>Development</p>
+          <p>Transportation</p>
+          <p>Architecture</p>
+          <p>Public Art</p>
+          <p>Opinions</p>
+        </div>
+        <div class="footer-list-col">
+          <p>VENTURE</p>
+          <p>Tech</p>
+          <p>Entrepreneurs</p>
+          <p>Jobs</p>
+          <p>Opinions</p>
+          <p>Videos</p>
+        </div>
+        <div class="footer-list-col">
+          <p>OFFSIDE</p>
+          <p>Hockey</p>
+          <p>Basketball</p>
+          <p>Baseball</p>
+          <p>Footbal</p>
+          <p>Soccer</p>
+          <p>Opinions</p>
+          <p>Videos</p>
+        </div>
+        <div class="footer-list-col">
+          <p>CURATED</p>
+          <p>Outdoors</p>
+          <p>Health & Fitness</p>
+          <p>Beauty & Fashion</p>
+          <p>Home Decor</p>
+          <p>Pop Culture</p>
+          <p>Contests</p>
+          <p>Inside DH</p>
+        </div>
+        <div class="footer-list-col">
+          <p>MAPPED</p>
+          <p>News</p>
+          <p>Guides</p>
+          <p>Bucket List</p>
+          <p>Tips</p>
+          <p>Videos</p>
+        </div>
+        <div class="footer-list-col">
+          <p>CANADA</p>
+          <p>News</p>
+          <p>Sports</p>
+          <p>Lottery</p>
+          <p>Politics</p>
+          <p>Food</p>
+        </div>
+      </div>
+      <div class="footer-bottom2">
+        <div class="footer-copyright3">
+          <p>Daily Hive is a Canadian-born online news source, established in 2008, that creates compelling, hyperlocal content.</p>
+          <p> Copyright Ⓒ 2023 Buzz Connected Media Inc.</p>
+        </div> 
+        <div class="footer-contact2">
+          <label for="footerEmailBox">Get direct access to our top weekly content, contests, and perks.</label>
+          <form>
+            <input name="EMAIL" placeholder="Enter Email Address" id="footerEmailBox" data-testid="footerEmailBox" value="">
+            <button type="submit" class="footer-submit" aria-label="Submit user email">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+          <div class="social-media2">
+            <p>Follow us</p>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-tiktok"></i>
+          </div>
+        </div>  
+      </div>
     </footer>
+
+    <script src="/scripts/script-carousel.js"></script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
